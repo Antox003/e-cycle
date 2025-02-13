@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+  background-color: #A1C3A8;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.container-admin{
+  width: 90%;
+  max-width: 1500px;
+  min-height: 100vh;
+  background-color: #FFF;
+  border-radius: 20px;
+  box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.30);
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.titolo{
+  font-size: 30px;
+  font-weight: 700;
+  color: #2F3841;
+  text-align: left; 
+  margin: 35px 0 20px 60px;
+}
+
+.img-h3{
+  width: 40px;
+  height: 30px;
+  margin: 0 auto;
+  opacity: 0.8;
+}
+
+.contenuto{
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 110px);
+  overflow: hidden;
+}
+
+.container-nav{
+  height: 70%;
+  width: 250px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  border-bottom-left-radius: 20px;
+  border-radius: 20px;
+  box-shadow: 2px 10px 30px 0px rgba(0, 0, 0, 0.30);
+}
+
+.nav{
+  min-height: 91vh;
+  width: 250px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 1px 1px 10px rgba(198, 189, 248, 0.825);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 0 20px 10px;
+  overflow-y: auto;
+}
+
+.nav-distanza-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-div{
+  width: 250px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px 0 20px;
+  gap: 20px;
+  transition: all 0.1s ease-in-out;
+}
+
+.nav-div:hover{
+  border-left: 5px solid #99c992;
+  background-color: #dadada;
+  cursor: pointer;
+}
+
+.contrassegno{
+  border-left: 5px solid black;
+  background-color: #bfeab8;
+  color: black;
+  cursor: pointer;
+}
+
+.nav-img{
+  height: 30px;
+}
+
+.main{
+  flex: 1;
+  padding: 20px 30px 30px 30px;
+  overflow-y: auto;
+}
+
+.container-sezione{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.p_titolo{
+  font-size: 20px;
+  padding-bottom: 3%;
+  padding-top: 3%;
+  text-align: left;
+  display: block;
+  width: 100%;
+}
+
+.titolo_p{
+  font-size: 28px;
+}
+
+.p{
+  font-size: 20px;
+  padding-bottom: 4%;
+  text-align: left;
+  display: block;
+  width: 100%;
+}
+
+.b{
+  font-size: 28px;
+  background-color: #bfeab8;
+  padding: 5px 10px;
+}
+
+.img-p{
+  width: 32px;
+  height: 23px;
+}
+
+.link{
+  color: #0645AD;
+  cursor: pointer;
+}
+
+.container-riquadri{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 45px;  
+  padding-bottom: 5%;
+  width: 100%;
+}
+
+.riquadro{
+  height: 130px;
+  width: 230px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
+  padding: 1px 20px 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  background-color: #99c992;
+}
+
+.riquadro:hover{
+  transform: scale(1.08);
+}
+
+.riquadro img{
+  height: 50px;
+}
+
+.riquadro .dettagli{
+  color: white;
+}
+
+.dett-1{
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.dett-2{
+  font-size: 15px;
+  font-weight: 450;
+  letter-spacing: 1px;
+}
+
+.dett-3{
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.sfondo-popup{ 
+  display: none; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px); /* Per Safari */
+  justify-content: center; 
+  align-items: center; 
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+} 
+
+.sfondo-popup.show{ 
+  display: flex; 
+  opacity: 1; 
+} 
+
+.container-popup{ 
+  background: #fff;
+  padding: 24px; 
+  border-radius: 12px; 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); 
+  width: 600px; 
+  text-align: center; 
+  opacity: 0; 
+  overflow-y: auto;
+  max-height: 90vh;
+  transform: scale(0.8); 
+  animation: fadeInUp 0.5s ease-out forwards; 
+}
+
+.container-popup_ind{ 
+  width: 1000px; 
+}
+
+.h2-popup{
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.container-form{ 
+  display: flex; 
+  flex-direction: column; 
+} 
+
+.form-label{ 
+  margin-bottom: 10px; 
+  font-size: 16px; 
+  color: #444; 
+  text-align: left; 
+} 
+
+.form-input{ 
+  padding: 10px; 
+  margin-bottom: 20px; 
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  font-size: 16px; 
+  width: 100%; 
+  box-sizing: border-box; 
+} 
+
+.button-submit, .button-chiudi-popup{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+  height: 35px;
+  width: 170px;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: #AAD059;
+  border-radius: 10px;
+  transform: scale(1.05);
+} 
+
+.selezione{
+  width:100%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.button-submit{ 
+  background-color: #AAD059;
+  color: #fff; 
+} 
+
+.button-chiudi-popup{ 
+  margin-top: 12px; 
+  background-color: #E44C4C;
+  color: #fff; 
+}
+
+.button-submit:hover{
+  background-color: rgb(1, 78, 1); 
+}
+
+.button-chiudi-popup:hover{ 
+  background-color: #88261c; 
+} 
+
+@keyframes fadeInUp{ 
+  from{ 
+    opacity: 0; 
+    transform: translateY(20px); 
+  } 
+
+  to{ 
+    opacity: 1; 
+    transform: translateY(0); 
+  } 
+} 
+
+.ordini-recenti{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.button-dash{
+  height: 35px;
+  width: 170px;
+  font-weight: 600;
+  color: #FFFFFF;
+  transition: .2s ease-in;
+  display: flex;
+  margin-left: 30px;
+  justify-content: center;
+  border: none;
+  background-color: #AAD059;
+  border-radius: 10px;
+  padding: 6px;
+  cursor: pointer;
+  font-size: 17px;
+  align-items: center;
+  transition: .2s ease-in;
+}
+
+.button-dash:hover{
+  border-radius: 10px;
+  height: 35px;
+  transform: scale(1.05);
+  transition: .2s ease-in;
+}
+
+.img-button{
+  width: 20px;
+  height: 17px;
+}
+
+.riquadro2{
+  height: 100px;
+  width: 200px;
+}
+
+.container-ricerca{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.container-ricerca input[type="text"], .container-ricerca input[type="date"]{
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #bfeab8;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
+}
+
+.container-ricerca input[type="text"]{
+  flex: 1;
+}
+
+.container-ricerca input[type="date"]{
+  flex: 0 1 auto;
+}
+
+.risultati-ricerca{
+  font-size: 25px;
+  color: #000000;
+}
+
+.ruolo_utenti{
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #bfeab8;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
+}
+
+.tabella-utente{
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+}
+
+.tabella-utente th, .tabella-utente td{
+  padding: 1px;
+  padding-bottom: 30px;
+  text-align: center;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.tabella-utente th{
+  background-color: #bfeab8;
+  font-size: 20px;
+  padding: 3px;
+}
+
+.tabella-utente td{
+  background-color: #fff;
+}
+
+.tabella-utente, .tabella-utente th, .tabella-utente td{
+  border: 1px solid #c0c0c0;
+}
+
+.tabella-utente tr{
+  border-bottom: none;
+}
+
+.img-tab{
+  width: 30px;
+  height: 18px;
+  cursor: pointer;
+  margin-top: 14%;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .container-admin {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .nav {
+    width: 200px;
+  }
+
+  .nav-div, .container-nav {
+    width: 200px;
+  }
+
+  .main {
+    padding: 15px 20px 20px 20px;
+  }
+
+  .riquadro {
+    width: 200px;
+    height: 120px;
+  }
+  
+  .button-dash{
+    font-size: 14px;
+  }
+
+}
+
+@media only screen and (max-width: 700px) {
+  .contenuto {
+    flex-direction: column;
+  }
+
+  .main {
+    flex: 1;
+    padding: 40px 30px 50px 30px;
+    overflow-y: auto;
+    height: auto;
+  }
+
+  .container-nav{
+    width: 100%;
+    height: 55%;
+  }
+
+  .nav {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .container-admin{
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .button-dash{
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,85 @@
+@charset "ISO-8859-1";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+   	font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #A1C3A8;
+    height:100vh;
+}
+
+.footer-container{
+	position:relative;
+	top:45%
+}
+
+.login-form{
+    display: flex;
+    justify-content: center;
+    position:relative;
+    top:20%;
+}
+
+.login-form h2{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 1rem;
+}
+
+
+.login-form .container{
+    padding: 20px;
+    background: #ffffff;
+    width: 40%;
+    border-radius: 20px;
+    display:flex;
+    justify-content:center;
+}
+
+.container form input {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    background-color: #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.container form input:focus {
+    border-color: #7cc242;
+    box-shadow: 0 0 5px rgba(124, 194, 66, 0.5);
+    outline: none;
+}
+
+.container form .button-container{
+    text-align: center;
+}
+
+#button{
+    background: #AAD059;
+    border: none;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    width: 200px;
+}
+
+.container form p a{
+    color: #000000;
+}
+
+@media only screen and (max-width:800px) {
+	
+	.login-form .container{
+    	width: 70%;
+	}
+
+}

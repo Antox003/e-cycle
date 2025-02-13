@@ -1,0 +1,335 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    background-color: #A1C3A8;
+}
+
+.titoli {
+    margin: auto;
+    width: 90%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.articoli-carrello {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.articolo-carrello {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.container-carrello {
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    width: 70%;
+    min-height: 550px;
+    background-color: #FFF;
+    border-radius: 20px;
+    box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.30);
+    margin: 40px auto;
+}
+
+.titolo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #2F3841;
+}
+
+.cancella-articoli a{
+    font-size: 20px;
+    font-weight: 600;
+    color: #E44C4C;
+    cursor: pointer;
+    border-bottom: 1px solid #E44C4C;
+    text-decoration:none;
+}
+
+.box-immagine {
+    text-align: center;
+    width: 20%;
+    height: 100%;
+}
+
+.immagine-prodotto {
+    height: 100px;
+}
+
+.info-prodotto {
+    height: 100%;
+}
+
+.titolo-prodotto {
+    padding-top: 5px;
+    line-height: 10px;
+    font-size: 25px;
+    font-weight: 800;
+    color: #202020;
+}
+
+.dettagli {
+    line-height: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #909090;
+}
+
+.quantita {
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button a{
+    width: 28px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 800;
+    color: #202020;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input[type=number]{
+	border:none;
+	text-align:center;
+	font-weight:600;
+	font-size:15px;
+}
+
+.contatore {
+    font-size: 19px;
+    font-weight: 920;
+    color: #2f2f2f;
+}
+
+.prezzo {
+    height: 100%;
+    text-align: right;
+}
+
+.ammontare {
+    padding-top: 20px;
+    font-size: 26px;
+    font-weight: 800;
+    color: #202020;
+}
+
+.rimuovi a{
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #E44C4C;
+    cursor: pointer;
+}
+
+hr {
+    width: 66%;
+    float: right;
+    margin-right: 5%;
+}
+
+.checkout {
+    float: right;
+    margin-right: 5%;
+    width: 28%;
+    margin-bottom: 1%;
+}
+
+.spedizione {
+    font-size: 15px;
+    font-weight: 600;
+    color: #909090;
+}
+
+.totale {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subtotale {
+    font-size: 22px;
+    font-weight: 700;
+    color: #202020;
+}
+
+.costo-totale {
+    font-size: 36px;
+    font-weight: 900;
+    color: #202020;
+}
+
+.pulsante {
+    margin-top: 5px;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: #AAD059;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #202020;
+}
+
+.img-h3 {
+    width: 45px;
+    height: 35px;
+    margin: 0 auto;
+}
+
+.img-h5 {
+    width: 16px;
+    height: 16px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 1200px) {
+    .box-immagine {
+        height: 5%;
+        width: 1%;
+        margin-right: 65%;
+        margin-top: 3%;
+    }
+
+    .immagine-prodotto {
+        height: 85px;
+    }
+
+    .info-prodotto {
+        height: 120px;
+        margin-left: 5%;
+    }
+
+    .titolo-prodotto {
+        padding-top: 5px;
+        line-height: 20px;
+        font-size: 21px;
+    }
+
+    .dettagli {
+        line-height: 22px;
+        font-size: 17px;
+    }
+
+    .checkout {
+        float: right;
+        width: 90%;
+    }
+
+    .spedizione {
+        line-height: 22px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .pulsante {
+        width: 50%;
+        float: right;
+        margin-bottom: 3%;
+    }
+
+    .costo-totale {
+        font-size: 30px;
+    }
+
+    .cancella-articoli {
+        font-size: 16px;
+    }
+
+    .titolo {
+        font-size: 25px;
+    }
+
+    .quantita {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .box-immagine {
+        height: 5%;
+        margin-right: 65%;
+        margin-top: 3%;
+    }
+
+    .immagine-prodotto {
+        height: 70px;
+    }
+
+    .info-prodotto {
+        height: 120px;
+        margin-left: 5%;
+    }
+
+    .titolo-prodotto {
+        padding-top: 5px;
+        line-height: 20px;
+        font-size: 21px;
+    }
+
+    .dettagli {
+        line-height: 22px;
+        font-size: 17px;
+    }
+
+    .checkout {
+        float: right;
+        width: 90%;
+    }
+
+    .spedizione {
+        line-height: 22px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .pulsante {
+        width: 50%;
+        float: right;
+        margin-bottom: 3%;
+    }
+
+    .costo-totale {
+        font-size: 30px;
+    }
+
+    .cancella-articoli {
+        font-size: 13px;
+    }
+
+    .titolo {
+        font-size: 25px;
+    }
+
+    .quantita {
+        width: 30%;
+    }
+}

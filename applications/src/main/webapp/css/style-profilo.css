@@ -1,0 +1,176 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+	font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0; 
+  background-color: #A1C3A8;
+  overflow: auto;
+}
+
+.max{
+	display:flex;
+	justify-content:center;
+}
+
+.profilo{
+	text-align:center;
+}
+
+.profilo h3{
+	text-align:center;
+	color:#000000;
+}
+
+.container-profilo{
+  width: 70%;
+  height: auto;
+  background-color: #FFF;
+  border-radius: 20px;
+  box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.30);
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.titolo{
+  font-size: 30px;
+  font-weight: 700;
+  color: #2F3841;
+}
+
+hr{
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.img-h3{
+  width: 30px;
+  height: 25px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.img-h5{
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+
+.img-riepilogo{
+  width: 40px;
+  height: 25px;
+}
+
+.img-cont{
+  width: 30px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.titolo-info{
+  margin-left: 10%;  
+  display: inline-table;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2%;
+  font-size: 26px;
+}
+
+.modifica{
+  display: block;
+  color: #0645AD;
+  text-align: left;
+  font-size: 17px;
+  cursor: pointer;
+  margin-top: 3%;
+}
+
+.riepilogo{
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 1px 2px 25px 5px rgba(60, 59, 59, 0.6);
+  border-radius: 20px; 
+  max-width: 600px;
+  text-align: left;
+  margin-left: 10%;
+  margin-right: 10%;
+  overflow: hidden;
+}
+
+.tabella-utente{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabella-utente th, .tabella-utente td{
+  padding: 12px;
+  text-align: left;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.tabella-utente th{
+  background-color: #bfeab8;
+  width: 40%;
+}
+
+.tabella-utente td{
+  background-color: #fff;
+  width: 60%;
+}
+
+.tabella-utente, .tabella-utente th, .tabella-utente td{
+  border: 1px solid #ddd;
+}
+
+.tabella-utente tr{
+  border-bottom: none;
+}
+
+
+@media only screen and (max-width:600px) {
+  .titolo{
+    font-size: 22px;
+  }
+
+  .logout{
+    font-size: 18px;
+  }
+
+  .titolo-info{
+    font-size: 20px;
+  }
+
+  .img-h3{
+    width: 25px;
+    height: 20px;
+  }
+  
+  .img-h5{
+    width: 18px;
+    height: 16px;
+  }
+
+  .img-riepilogo{
+    width: 28px;
+    height: 20px;
+  }
+
+  .img-cont{
+    width: 30px;
+    height: 17px;
+  }
+
+  .tabella-utente th{
+    font-size: 15px;
+  }
+
+  .modifica{
+    font-size: 15px;
+  }
+}
