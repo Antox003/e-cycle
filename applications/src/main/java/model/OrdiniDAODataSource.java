@@ -241,7 +241,7 @@ public class OrdiniDAODataSource implements IBeanDAO<OrdiniBean> {
     }
     
     
-   /*
+   
 
     public void saveOrder(OrdiniBean ordini, ProductBean prodotto, UserBean user, SpedizioneBean spedizione, PagamentoBean pagamento) throws SQLException {
         String insertOrderSQL = "INSERT INTO ORDINI (Numero_Prodotti, Data_acquisto, ID_ACCOUNT, Nome_prodotto, ID_INDIRIZZO, Numero_carta) VALUES (?, ?, ?, ?, ?, ?)";
@@ -255,7 +255,7 @@ public class OrdiniDAODataSource implements IBeanDAO<OrdiniBean> {
             // Verifica dei dati prima dell'inserimento
             if (ordini.getNumeroprodotti() != null && !ordini.getNumeroprodotti().isEmpty() &&
                 prodotto.getNome() != null && !prodotto.getNome().isEmpty() &&
-                spedizione.getIndirizzo() > 0 && pagamento.getNumerocarta() != null && !pagamento.getNumerocarta().isEmpty()) {
+                spedizione.getIndirizzo() != null && pagamento.getNumerocarta() != null && !pagamento.getNumerocarta().isEmpty()) {
                 
                 // Imposta i parametri del PreparedStatement
                 preparedStatement.setString(1, ordini.getNumeroprodotti());
@@ -292,6 +292,6 @@ public class OrdiniDAODataSource implements IBeanDAO<OrdiniBean> {
             }
         }
     }
-*/
+
 }
 
