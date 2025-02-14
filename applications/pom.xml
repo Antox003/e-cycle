@@ -1,38 +1,141 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">  <modelVersion>4.0.0</modelVersion>
   <groupId>e-cycle</groupId>
   <artifactId>e-cycle</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <version>5.9.2</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.9.2</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+<dependencies>
 
+ 
+    <!-- Selenium WebDriver -->
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>4.1.2</version>
+        <scope>test</scope>
+    </dependency>
+
+     <!-- WebDriverManager (per gestire i driver dei browser automaticamente) -->
+    <dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.3.0</version>
+    <scope>test</scope>
+</dependency>
+
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.7.32</version>  <!-- Usa l'ultima versione -->
+    </dependency>
+
+    <!-- Logback Classic (implementazione di SLF4J) -->
+    <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.2.6</version>  <!-- Usa l'ultima versione -->
+    </dependency>
+
+    <!-- Logback Core (necessario per logback-classic) -->
+    <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-core</artifactId>
+        <version>1.2.6</version>  <!-- Usa l'ultima versione -->
+    </dependency>
+
+ <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.9.2</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.9.2</version>
+        <scope>test</scope>
+    </dependency>
+
+<dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-core</artifactId>
+    <version>4.11.0</version>
+    <scope>test</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-junit-jupiter</artifactId>
+    <version>4.11.0</version>
+    <scope>test</scope>
+</dependency>
+
+
+    
+    <!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+<dependency>
+    <groupId>commons-fileupload</groupId>
+    <artifactId>commons-fileupload</artifactId>
+    <version>1.4</version>
+</dependency>
+
+    <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.11.0</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>servlet-api</artifactId>
+    <version>3.0-alpha-1</version>
+    <scope>provided</scope>
+</dependency>
+
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.29</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc -->
+<dependency>
+    <groupId>org.xerial</groupId>
+    <artifactId>sqlite-jdbc</artifactId>
+    <version>3.42.0.0</version>
+</dependency>
+
+
+<!-- https://mvnrepository.com/artifact/org.antlr/antlr4-runtime -->
+<dependency>
+    <groupId>org.antlr</groupId>
+    <artifactId>antlr4-runtime</artifactId>
+    <version>4.10.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api -->
+<dependency>
+    <groupId>javax.servlet.jsp</groupId>
+    <artifactId>jsp-api</artifactId>
+    <version>2.2.1-b03</version>
+    <scope>provided</scope>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>3.0.1</version>
+    <scope>provided</scope>
+</dependency>
+    
+    
+  </dependencies>
   <build>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.13.0</version>
-        <configuration>
-          <release>17</release>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>3.2.3</version>
-      </plugin>
-    </plugins>
+    <finalName>Ecycle</finalName>
   </build>
 </project>
